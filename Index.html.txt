@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Will You Be My Girlfriend?</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #ffe6f0, #ffccff);
+      color: #333;
+      text-align: center;
+    }
+
+    .container {
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #ff3399;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.3em;
+      max-width: 700px;
+      margin: 20px auto;
+    }
+
+    .question {
+      font-size: 2.5em;
+      color: #cc0066;
+      margin-top: 40px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background-color: #ff66b2;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #e60073;
+    }
+
+    .hearts {
+      font-size: 2em;
+      animation: float 2s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hearts">💖 💞 💖</div>
+    <h1>A Special Question Just for You</h1>
+    <p>
+      From the moment we met, I felt something different. You light up my world in the most beautiful way. <br>
+      So today, I have something very special to ask you...
+    </p>
+
+    <div class="question">Will you be my girlfriend?</div>
+
+    <div class="buttons">
+      <a href="#" class="btn">Yes 💕</a>
+      <a href="#" class="btn">Of Course! 💘</a>
+    </div>
+  </div>
+</body>
+</html>
