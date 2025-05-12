@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Will You Be My Girlfriend?</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #ffe6f0, #ffccff);
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #ff3399;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.5em;
+      max-width: 700px;
+      margin: 20px auto;
+    }
+
+    .question {
+      font-size: 2em;
+      color: #cc0066;
+      margin-top: 30px;
+    }
+
+    .sub-question {
+      font-size: 1.2em;
+      margin-top: 20px;
+      color: #660033;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background-color: #ff66b2;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 10px;
+      transition: background 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #e60073;
+    }
+
+    .btn:disabled {
+      background-color: #d3d3d3;
+      cursor: not-allowed;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .hearts {
+      font-size: 2em;
+      animation: float 2s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hearts">💖 💞 💖</div>
+    <h1>Let's Go on an Adventure</h1>
+    <p>Before we get to the big question, I have a couple of things I want to ask you.</p>
+
+    <div class="sub-question hidden" id="subQuestion1">
+      <p>First, do you feel comfortable and loved by me?</p>
+      <button class="btn" id="yes1" onclick="nextQuestion(1)">Yes</button>
+      <button class="btn" id="no1" disabled>No</button>
+    </div>
+
+    <div class="sub-question hidden" id="subQuestion2">
+      <p>Do you feel like I make it easy to love me?</p>
+      <button class="btn" id="yes2" onclick="nextQuestion(2)">Yes</button>
+      <button class="btn" id="no2" disabled>No</button>
+    </div>
+
+    <div class="sub-question hidden" id="subQuestion3">
+      <p>Are you willing to make things work out for the better?</p>
+      <button class="btn" id="yes3" onclick="nextQuestion(3)">Yes</button>
+      <button class="btn" id="no3" disabled>No</button>
+    </div>
+
+    <div class="question hidden" id="mainQuestion">
+      <p>Now, here's the real question...</p>
+      <p><strong>Will you be my girlfriend?</strong></p>
+      <button class="btn" id="yes4" onclick="finalAnswer()">Yes 💕</button>
+      <button class="btn" id="no4" disabled>No</button>
+    </div>
+  </div>
+
+  <script>
+    // Show first sub-question
+    window.onload = function() {
+      document.getElementById("subQuestion1").classList.remove("hidden");
+    };
+
+    // Enable the "Yes" button and move to the next sub-question
+    function nextQuestion(questionNumber) {
+      if (questionNumber === 1) {
+        document.getElementById("subQuestion1").classList.add("hidden");
+        document.getElementById("subQuestion2").classList.remove("hidden");
+      } else if (questionNumber === 2) {
+        document.getElementById("subQuestion2").classList.add("hidden");
+        document.getElementById("subQuestion3").classList.remove("hidden");
+      } else if (questionNumber === 3) {
+        document.getElementById("subQuestion3").classList.add("hidden");
+        document.getElementById("mainQuestion").classList.remove("hidden");
+      }
+    }
+
+    // When the final "Yes" is clicked, show a success message
+    function finalAnswer() {
+      alert("Yay! You said Yes! 💖");
+    }
+  </script>
+</body>
+</html>
